@@ -128,7 +128,7 @@
                     });
                     var load = LoadFormFields(this, listID, opt.listName, opt.StratusFormsDataField,listFieldsArray);
                     load.done(function(){
-                            $("textarea[data-StratusFormsType='Signature'").each(function () {
+                            $("textarea[data-StratusFormsType='Signature']").each(function () {
                             var canvasID = $(this).attr("id")+'canvas';
                             $(this).after('<canvas style="border:thin black solid;" id="'+canvasID+'" width="'+$(this).attr("width")+'" height="'+$(this).attr("height")+'"></canvas>');
                             $('#'+canvasID).sketch();
@@ -160,7 +160,7 @@
         
                     });
 
-                    $("textarea[data-StratusFormsType='Signature'").each(function () {
+                    $("textarea[data-StratusFormsType='Signature']").each(function () {
                         $(this).after('<canvas style="border:thin black solid;" id="'+$(this).attr("id")+'canvas" width="'+$(this).attr("width")+'" height="'+$(this).attr("height")+'"></canvas>');
                         $('#'+$(this).attr("id")+'canvas').sketch();
                         $(this).hide();
@@ -168,7 +168,7 @@
                     opt.completefunc();
                 }
 
-                $("div[data-StratusFormsType='File'").each(function () {
+                $("div[data-StratusFormsType='File']").each(function () {
                     $(this).StratusFileHandler ();
 
                 });
